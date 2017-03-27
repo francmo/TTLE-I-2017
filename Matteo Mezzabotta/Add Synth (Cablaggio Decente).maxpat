@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 966.0, 783.0 ],
+		"rect" : [ 34.0, 79.0, 1372.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1215,7 +1215,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 112.0, 53.0, 85.0, 22.0 ],
+					"patching_rect" : [ 111.0, 38.0, 85.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess 440"
 				}
@@ -1255,7 +1255,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 112.0, 119.0, 50.0, 22.0 ],
+					"patching_rect" : [ 111.0, 104.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
