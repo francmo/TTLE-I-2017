@@ -3,7 +3,7 @@
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
-//------------------------------------------------------- 001 - MONO - DUALMONO -
+//------------------------------------------------- 001 - SIMPLE STARTING POINT -
 //-------------------------------------------------------------------------------
 
 // references
@@ -51,17 +51,6 @@ Server.local.options.sampleRate = 48000;
 { SinOsc.ar(440, pi, 0.2) }.plot;
 { SinOsc.ar(440, 1.5pi, 0.2) }.plot;
 
-// non suona? forse dovresti controllare la finestra post
-// accendi il motore e riprova
-s.boot;
-
-// per spegnere il motore
-s.quit;
-
-// s is just an interpreter variable, which is pre-assigned the value from Server.local:
-// Server.local.boot;
-// Interpreter variables (a - z) are pre-declared when you start up SC, and have global scope.
-
 // chi a destra e chi a sinistra
 { [0, SinOsc.ar(440, 0, 0.2)] }.play;
 
@@ -88,24 +77,6 @@ s.quit;
 
 // azimuth panner to any number of channels arguments: num channels, in, pan position, level, width
 { PanAz.ar(5, BrownNoise.ar, MouseX.kr(-1,1), 0.3, 2) }.scope(5);
-
-// PanB2 and DecodeB2 - 2D ambisonics panner and decoder
-(
-{
-	var w, x, y, p, lf, rf, rr, lr;
-
-	p = BrownNoise.ar; // source
-
-	// B-format encode
-	#w, x, y = PanB2.ar(p, MouseX.kr(-1,1), 0.3);
-
-	// B-format decode to quad. outputs in clockwise order
-	// #lf, rf, rr, lr = DecodeB2.ar(4, w, x, y);
-
-	[w, x, y, 0]
-	//[lf, rf, lr, rr] // reorder to my speaker arrangement: Lf Rf Lr Rr
-}.scope(4);
-)
 
 //------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------
