@@ -44,7 +44,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 487.5, 142.0, 47.0, 20.0 ],
 					"style" : "",
-					"text" : "flanger"
+					"text" : "phaser"
 				}
 
 			}
@@ -589,8 +589,8 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-47::obj-35" : [ "[5]", "Level", 0 ],
-			"obj-47::obj-21::obj-6" : [ "live.tab[3]", "live.tab[1]", 0 ]
+			"obj-47::obj-21::obj-6" : [ "live.tab[3]", "live.tab[1]", 0 ],
+			"obj-47::obj-35" : [ "[5]", "Level", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
